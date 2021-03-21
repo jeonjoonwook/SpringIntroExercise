@@ -29,7 +29,7 @@ public class MemberServiceIntegrationTest {
     void 회원가입() throws SQLException {
         //given
         Member member = new Member();
-        member.setName("joonwook");
+        member.setName("joonwook2");
         //when
         Long saveId = memberService.join(member);
 

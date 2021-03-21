@@ -25,9 +25,11 @@ public class MemberService {
     //회원가입
     public Long join(Member member) throws SQLException {
 
-        validateDuplicateMember(member);
-        memberRepository.save(member);
-        return member.getId();
+
+            validateDuplicateMember(member);
+            memberRepository.save(member);
+            return member.getId();
+
     }
 
     private void validateDuplicateMember(Member member) throws SQLException {
