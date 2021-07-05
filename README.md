@@ -36,3 +36,27 @@ API
 기본 객체처리 : MappingJackkson2HttpMessageConverter  
 -HTTP Body 에 데이터를 반환  
 
+일반적인 웹 애플리케이션 구조    
+  -컨트롤러 : 웹 MVC 의 컨트롤러 역할  
+  -서비스 : 비즈닌스 로직   
+  -리포지토리 : DB 접근, 도메인 객체를 DB 저장하고 관리   
+  -도메인 : 비즈니스 도메인 객체  
+
+ ![이미지1](https://user-images.githubusercontent.com/35962655/124472218-cf911b80-ddd8-11eb-8f07-0583ce99c9e8.png)  
+- MemberService 가 인터페이스를 바라보게 한다.   
+- 인터페이스로 구현 클래스를 자유롭게 변경할 수 있도록 설계한다.  
+![이미지2](https://user-images.githubusercontent.com/35962655/124472501-2ac30e00-ddd9-11eb-8c6a-3748c493b917.PNG)  
+테스트 코드 작성  
+ - 테스트는 순서에 상관없이 메소드 별로 독립적이어야 한다. 메소드 끼리 의존관계 있는것은 좋지 못하다.  
+ -@AfterEach는 하나의 메소드가 끝날때마다 실행되는 메소드로, 윗 예제에서는 저장소 데이터들을 삭제하는 역할  
+ -테스트 주도 개발(TDD) : 테스트 클래스를 먼저 작성하고 구현클래스를 작성  
+ -테스트 코드는 given - when- then구조로 짜야 한다. 데이터가 주어지고 이것을 실행했을때 결과가 제대로 나와야한다.  
+ 
+ MemberService 클래스를 만들고 직접 memberRepository를 new로 생성하지 않고  
+외부에서 memberRepository를 주입 받도록 한다. (의존성 주입)  
+![3](https://user-images.githubusercontent.com/35962655/124472652-5645f880-ddd9-11eb-966d-289605c1000d.PNG)   
+MemberServiceTest클래스를 만들고 메소드가 @BeforeEach를 사용하여 테스트가  
+실행 되기 전마다 memberService에 memberRepository를 주입 시켜 준다.  
+ ![4](https://user-images.githubusercontent.com/35962655/124472741-71b10380-ddd9-11eb-8796-926f11baa10c.PNG)
+  
+
