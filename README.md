@@ -27,3 +27,4 @@ API
 ![이미지3](https://user-images.githubusercontent.com/35962655/124465860-e16ec080-ddd0-11eb-9dfb-4f4c3e9bee61.png)
 
 @ResponseBody 객체 반환
+![이미지4](https://user-images.githubusercontent.com/35962655/124466026-1e3ab780-ddd1-11eb-9399-ee67a2d6f38b.png)
