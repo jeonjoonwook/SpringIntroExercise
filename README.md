@@ -59,4 +59,30 @@ MemberServiceTest클래스를 만들고 메소드가 @BeforeEach를 사용하여
 실행 되기 전마다 memberService에 memberRepository를 주입 시켜 준다.  
  ![4](https://user-images.githubusercontent.com/35962655/124472741-71b10380-ddd9-11eb-8796-926f11baa10c.PNG)
   
+컴포넌트 스캔과 자동 의존관계 설정  
+![1](https://user-images.githubusercontent.com/35962655/124477740-53e69d00-dddf-11eb-80cd-97c659800001.PNG)  
+-생성자에 @Autowired가 있으면 스프링이 연관된 객체를 스프링 컨테이너에서 찾아서 넣어줌  
+-의존관계를 개발자가 직접 주입하는 것이 아니라 외부에서 넣어주는 것을 DI(Dependency Injection) 의존성주입 이라고 한다.  
+
+스프링 빈을 등록하는 방법  
+ - 컴포넌트 스캔과 자동 의존관계 설정  
+ - 자바 코드로 직접 스프링 빈 등록  
+
+컴포넌트 스캔 원리  
+ - @Component 애노테이션이 있으면 스프링 빈으로 등록됨  
+ - @Controller , @Service, @Repository도  @Component를 포함하므로 스프링 빈으로 등록됨  
+ - 생성자가 1개만 있으면 @Autowired 생략 가능   
+ - 스프링 컨테이너에 빈을 등록할 때, 기본으로 싱글톤으로 등록  
+ 
+자바 코드로 직접 스프링 빈 등록하기  
+ - MemberService와 MemoryMemberRepository의 @Service, @Repository, @Autowired 애노테이션 제거  
+ - MemberService, MemberRepository 직접 java 코드로 빈 등록  
+ ![2](https://user-images.githubusercontent.com/35962655/124478415-1fbfac00-dde0-11eb-9d66-61799c9086f4.PNG)  
+
+#  xml 설정 방식은 과거의 방식으로 최근에는 잘 사용 안함  
+#  DI에는 필드 주입, setter주입, 생성자 주입 3가지 방법이 있는데 주로 생성자 주입을 권함  
+# 정형화된, 컨트롤러, 서비스, 리포지토리는 주로 컴포넌트 스캔 사용  
+# 정형화 되지 않거나 상황에 따라 클래스를 변경해야 하면 설정을 통해 스프링 빈 등록  
+ 
+ 
 
