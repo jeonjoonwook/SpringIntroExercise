@@ -19,3 +19,8 @@ MVC와 템플릿 엔진
 -실행 : http://localhost:8080/hello-mvc?name=joonwook    
 
 ![이미지2](https://user-images.githubusercontent.com/35962655/124464779-93a58880-ddcf-11eb-814c-a56ca77b5e08.png)
+
+API  
+@ResponseBody 문자 반환  
+ - @ResponseBody를 사용하면 뷰 리졸버를 사용하지 않고 HTTP BODY에 문자 내용을 반환 한다.  
+ - http://localhost:8080/hello-string?name=joonwook  
