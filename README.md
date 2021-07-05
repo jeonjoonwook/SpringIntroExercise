@@ -10,3 +10,8 @@
 화면을 찾아서 처리
   resources:templates/ + viewName(hello) + .html
 
+정적 컨텐츠 - controller를 거치지 않고 url로 호출하면 서버가 resource/static 에서 html 파일을 보여준다.   ex) http://localhost:8080/hello-static.html
+
+MVC와 템플릿 엔진
+-controller : 비즈니스 로직 작업 , view : 화면을 그려줌-url에 있는 'hello-mvc'를 컨트롤러에서 찾고 name 파라미터를 모델에 담아 view Name(hello-template)을 리턴한다.
+-템플릿 엔진은 모델에 담긴 파라미터 값을 화면에 반환한다.-실행 : http://localhost:8080/hello-mvc?name=joonwook
