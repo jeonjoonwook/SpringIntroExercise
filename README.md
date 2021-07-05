@@ -97,5 +97,14 @@ MemberServiceTest클래스를 만들고 메소드가 @BeforeEach를 사용하여
  - 페이징 기능 자동 제공  
 ![22](https://user-images.githubusercontent.com/35962655/124482257-0de00800-dde4-11eb-9ad7-cd2771cc9b5a.PNG)
 
- 
+ AOP  
+-모든 메소드에 시간측정 로직을 추가 하고 싶은 상황  
+-시간 측정은 핵심 기능이 아니기에 비즈니스 로직과 분리 시켜야 한다.  
+-시간 측정 로직은 공통 관심 상황임  
+![33](https://user-images.githubusercontent.com/35962655/124482917-bee6a280-dde4-11eb-9d43-f65903ce30e6.PNG)  
+해결  
+ - 비즈니스 로직(핵심 관심사항) 과 시간 측정(공통 관심 사항)을 분리 한다.  
+ - 시간 측정 로직을 별도의 공통 로직으로 만든다.  
+ AOP의 동작 방식  
+ ![44](https://user-images.githubusercontent.com/35962655/124483075-e89fc980-dde4-11eb-981a-1824adf1433f.PNG)
 
