@@ -42,7 +42,7 @@ API
   -리포지토리 : DB 접근, 도메인 객체를 DB 저장하고 관리   
   -도메인 : 비즈니스 도메인 객체  
 
- ![이미지1](https://user-images.githubusercontent.com/35962655/124472218-cf911b80-ddd8-11eb-8f07-0583ce99c9e8.png)  
+![33](https://user-images.githubusercontent.com/35962655/124473612-7f1abd80-ddda-11eb-81ae-a743c8115232.PNG)
 - MemberService 가 인터페이스를 바라보게 한다.   
 - 인터페이스로 구현 클래스를 자유롭게 변경할 수 있도록 설계한다.  
 ![이미지2](https://user-images.githubusercontent.com/35962655/124472501-2ac30e00-ddd9-11eb-8c6a-3748c493b917.PNG)  
