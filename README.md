@@ -27,4 +27,11 @@ API
 ![이미지3](https://user-images.githubusercontent.com/35962655/124465860-e16ec080-ddd0-11eb-9dfb-4f4c3e9bee61.png)
 
 @ResponseBody 객체 반환  
-![이미지4](https://user-images.githubusercontent.com/35962655/124466026-1e3ab780-ddd1-11eb-9399-ee67a2d6f38b.png)
+![이미지4](https://user-images.githubusercontent.com/35962655/124466026-1e3ab780-ddd1-11eb-9399-ee67a2d6f38b.png)  
+
+@ResponseBody 사용  
+-객체를 반환하면 객체가 JSON으로 변환된다.  
+-viewResolver 대신에 HttpMessageConveter 가 동작해서 화면을 반환 하는 대신, 문자열 혹은 JSON 타입이 반환  
+기본 문자 처리 : StringHttpMessageConverter  
+기본 객체처리 : MappingJackkson2HttpMessageConverter  
+-HTTP Body 에 데이터를 반환  
