@@ -79,10 +79,23 @@ MemberServiceTest클래스를 만들고 메소드가 @BeforeEach를 사용하여
  - MemberService, MemberRepository 직접 java 코드로 빈 등록  
  ![2](https://user-images.githubusercontent.com/35962655/124478415-1fbfac00-dde0-11eb-9d66-61799c9086f4.PNG)  
 
-#  xml 설정 방식은 과거의 방식으로 최근에는 잘 사용 안함  
-#  DI에는 필드 주입, setter주입, 생성자 주입 3가지 방법이 있는데 주로 생성자 주입을 권함  
-# 정형화된, 컨트롤러, 서비스, 리포지토리는 주로 컴포넌트 스캔 사용  
-# 정형화 되지 않거나 상황에 따라 클래스를 변경해야 하면 설정을 통해 스프링 빈 등록  
+ -xml 설정 방식은 과거의 방식으로 최근에는 잘 사용 안함   
+ -DI에는 필드 주입, setter주입, 생성자 주입 3가지 방법이 있는데 주로 생성자 주입을 권함   
+ -정형화된, 컨트롤러, 서비스, 리포지토리는 주로 컴포넌트 스캔 사용   
+ -정형화 되지 않거나 상황에 따라 클래스를 변경해야 하면 설정을 통해 스프링 빈 등록   
  
+ JPA  
+ - JPA는 기존의 반복코드 제거와 기본적인 SQL 작성이 가능  
+ - JPA 사용시 SQL과 데이터 중심의 설계에서 객체 중심의 설계로 전환 가능  
+ ![1](https://user-images.githubusercontent.com/35962655/124481953-c8bbd600-dde3-11eb-829d-d527c9f04b71.PNG)
+  - show-sql : JPA가 생성하는 SQL을 출력  
+ - ddl-auto : JPA는 테이블을 자동으로 생성하는 기능을 제공, none을 사용하면 해당 기능을 끔  
+ 
+ 스프링 데이터 JPA  
+ - 리포지토리에 구현 클래스 없이 인터페이스 만드로 개발 가능  
+ - findByName(), findByEmail() 처럼 메서드 이름 만으로 조회 가능  
+ - 페이징 기능 자동 제공  
+![22](https://user-images.githubusercontent.com/35962655/124482257-0de00800-dde4-11eb-9ad7-cd2771cc9b5a.PNG)
+
  
 
