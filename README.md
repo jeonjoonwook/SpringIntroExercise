@@ -25,3 +25,5 @@ API
  - @ResponseBody를 사용하면 뷰 리졸버를 사용하지 않고 HTTP BODY에 문자 내용을 반환 한다.  
  - http://localhost:8080/hello-string?name=joonwook  
 ![이미지3](https://user-images.githubusercontent.com/35962655/124465860-e16ec080-ddd0-11eb-9dfb-4f4c3e9bee61.png)
+
+@ResponseBody 객체 반환
